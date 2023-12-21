@@ -1,9 +1,11 @@
-import { Container, Title } from "./styles";
+import { Container } from "./styles";
+import { Header } from "@components/Header";
+
 
 export const Home = () => {
   return (
     <Container>
-      <Title>Home Screen</Title>
+      <Header />
     </Container>
   );
 };
