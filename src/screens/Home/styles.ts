@@ -1,15 +1,13 @@
-import { StyleSheet } from "react-native";
+import { Text, View } from 'react-native'
+import styled from 'styled-components/native'
 
-export const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: "#fff",
-      alignItems: "center",
-      justifyContent: "center",
-    },
-    title: {
-        color: '#000',
-        fontSize: 50
-    }
-  });
-  
+export const Container = styled.View`
+	flex: 1;
+	background-color: ${({ theme }) => theme.colors.base.gray_7};
+	padding: 0 24px;
+`
+
+export const Title = styled.Text`
+  color: ${({ theme }) => theme.colors.base.gray_1} ;
+  font-size: 50px;
+`

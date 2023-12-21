@@ -4,15 +4,19 @@ import {
   NunitoSans_400Regular,
   NunitoSans_700Bold,
 } from "@expo-google-fonts/nunito-sans";
-import { ActivityIndicator,  View } from "react-native";
+import { ActivityIndicator,  StyleSheet,  View } from "react-native";
+import { ThemeProvider } from "styled-components/native";
+
 import { Home } from "@screens/Home";
+import theme from "@theme";
 
 
 export default function App() {
   const [fontsLoaded] = useFonts([NunitoSans_400Regular, NunitoSans_700Bold]);
 
   return (
-    <View>
+    <ThemeProvider theme={theme}>
+    <View style={styles.container}>
       {fontsLoaded ? (
         <Home />
       ) : (
@@ -20,6 +24,15 @@ export default function App() {
       )}
       <StatusBar style="auto" />
     </View>
+    </ThemeProvider>
   );
 }
 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
+  }
+})
