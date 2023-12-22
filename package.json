@@ -9,7 +9,8 @@
     "web": "expo start --web"
   },
   "dependencies": {
-    "@expo-google-fonts/nunito-sans": "^0.2.3",
+    "@expo-google-fonts/nunito": "^0.2.3",
+    "@expo-google-fonts/nunito-sans": "^0.2.2",
     "expo": "~49.0.15",
     "expo-app-loading": "^2.1.1",
     "expo-font": "~11.4.0",
@@ -22,8 +23,10 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
-    "@types/react": "~18.2.14",
+    "@types/react": "^18.2.45",
+    "@types/react-native": "~0.70.6",
     "@types/styled-components": "^5.1.26",
+    "@types/styled-components-react-native": "^5.2.1",
     "babel-plugin-module-resolver": "^5.0.0",
     "typescript": "^5.1.3"
   },
