@@ -1,12 +1,19 @@
-import { TextProps } from "react-native"
-import { Container } from "./styles"
+import { TextProps } from "react-native";
 
-type Props = TextProps
+import * as StylesDTO from "@dtos/StylesDTO";
 
-export const Typography = ({...props}:Props) => {
-    return (
-        <Container {...props} >
-            {props.children}
-        </Container>
-    )
+import { Container } from "./styles";
+
+export type TypographyStyle = {
+  fontSize?: StylesDTO.FontSize;
+  family?: StylesDTO.Family;
+  lineHeight?: StylesDTO.LineHeight;
+  color?: StylesDTO.Color;
+  textAlign?: StylesDTO.TextAlign;
+};
+
+type TypographyProps = TextProps & TypographyStyle & {};
+
+export function Typography({ ...props }: TypographyProps) {
+  return <Container {...props}>{props.children}</Container>;
 }
