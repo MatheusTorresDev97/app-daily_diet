@@ -6,6 +6,7 @@ import { View } from "react-native";
 import { Typography } from "@components/Typography";
 import { Button } from "@components/Button";
 import { Plus } from "phosphor-react-native";
+import { Meal } from "@components/Meal";
 
 export const Home = () => {
   return (
@@ -32,6 +33,8 @@ export const Home = () => {
         type="solid"
         />
       </View>
+
+      <Meal />
     </Container>
   );
 };
