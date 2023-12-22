@@ -34,7 +34,12 @@ export const Home = () => {
         />
       </View>
 
-      <Meal />
+      <Meal 
+      id="01"
+      hour="20:00"
+      description="X-Tudo"
+      isOnTheDiet={false}
+      />
     </Container>
   );
 };

@@ -1,4 +1,5 @@
 import styled from "styled-components/native";
+import { MealStatus } from ".";
 
 export const Container = styled.View`
   width: 100%;
@@ -26,12 +27,13 @@ export const Divider = styled.View`
   background-color: ${({ theme }) => theme.colors.base.gray_4};
 `;
 
-export const Status = styled.View`
+export const Status = styled.View<MealStatus>`
   width: 8px;
   height: 8px;
 
   margin-left: 12px;
   border-radius: 14px;
 
-  background-color: ${({theme}) => theme.colors.brand.green_mid};
+  background-color: ${({ theme, isOnTheDiet }) =>
+    isOnTheDiet ? theme.colors.brand.green_dark : theme.colors.brand.red_dark};
 `;

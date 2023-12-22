@@ -1,17 +1,25 @@
 import { Typography } from "@components/Typography";
 import { Container, Divider, Status } from "./styles";
 
-export const Meal = () => {
+export type MealStatus = {isOnTheDiet: boolean}
+
+type MealProps = MealStatus & {
+  id: string,
+  hour: string,
+  description: string
+}
+
+export const Meal = ({id, hour, description, isOnTheDiet}: MealProps) => {
   return (
-    <Container>
+    <Container id={id}>
       <Typography fontSize="body_xs" family="bold">
-        20:00
+        {hour}
       </Typography>
       <Divider />
       <Typography style={{ flex: 1 }} numberOfLines={1}>
-        X-tudo
+       {description}
       </Typography>
-      <Status />
+      <Status isOnTheDiet={isOnTheDiet}/>
     </Container>
   );
 };
